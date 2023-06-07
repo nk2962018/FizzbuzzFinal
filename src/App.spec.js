@@ -13,4 +13,10 @@ it("should have the header loaded", async () => {
   expect(header).toBeInTheDocument();
 }); 
 
+it("should have the proper header name", async () => {
+  render(<App/>)
+  const header = screen.getByTestId("header");
+  expect(header).toHaveTextContent("The Fizzbuzz Program");
+});
+
 
