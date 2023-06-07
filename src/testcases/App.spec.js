@@ -19,4 +19,10 @@ it("should have the proper header name", async () => {
   expect(header).toHaveTextContent("The Fizzbuzz Program");
 });
 
+it("should have the fizzBuzz loaded", () => {
+  render(<App/>)
+  const fizzBuzz = screen.getByTestId("fizzBuzz");
+  expect(fizzBuzz).toBeInTheDocument();
+});
+
 
