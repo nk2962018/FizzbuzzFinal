@@ -9,6 +9,9 @@ return (
          <Button
          text="Decrement"
         />
+        <div data-testid="result">
+        Result
+        </div>
     </div>
   );
 };

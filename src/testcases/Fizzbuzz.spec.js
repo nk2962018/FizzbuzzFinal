@@ -15,4 +15,9 @@ describe("The Fizzbuzz component works fine when", () => {
         const incrementButton = screen.getByTestId("Decrement");
         expect(incrementButton).toBeInTheDocument();
     });
+
+    it("should have the result section loaded", () => {
+        const resultSection = screen.getByTestId("result");
+        expect(resultSection).toBeInTheDocument();
+      });
 });
