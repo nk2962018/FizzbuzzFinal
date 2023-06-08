@@ -12,4 +12,10 @@ describe("The Fizzbuzz component works fine when", () => {
         const incrementButton = screen.getByTestId("Increment");
         expect(incrementButton).toBeInTheDocument();
     });
+    
+    it("should have the decrement button loaded", () => {
+        render(<Fizzbuzz/>);
+        const incrementButton = screen.getByTestId("Decrement");
+        expect(incrementButton).toBeInTheDocument();
+    });
 });
