@@ -20,4 +20,11 @@ describe("The Fizzbuzz component works fine when", () => {
         const resultSection = screen.getByTestId("result");
         expect(resultSection).toBeInTheDocument();
       });
+    
+    it("it should show count result when increment button is clicked ", () => {
+        const incrementButton = screen.getByTestId("Increment");
+         fireEvent.click(incrementButton);
+        const result = screen.getByTestId("result");
+        expect(result).toBeVisible();
+    });
 });
