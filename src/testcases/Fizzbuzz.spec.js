@@ -27,12 +27,19 @@ describe("The Fizzbuzz component works fine when", () => {
         const result = screen.getByTestId("result");
         expect(result).toBeVisible();
     });
-    
+
     test("Increment button is clicked twice and the value  fizz is displayed  ", () => {
         const incrementButton = screen.getByTestId("Increment");
         fireEvent.click(incrementButton);
         fireEvent.click(incrementButton);
         const result = screen.getByTestId("result");
         expect(result).toHaveTextContent("Fizz");
+    });
+
+    it("it should show count result when decrement button is clicked ", () => {
+        const decrementButton = screen.getByTestId("Decrement");
+         fireEvent.click(decrementButton);
+        const result = screen.getByTestId("result");
+        expect(result).toBeVisible();
     });
 });

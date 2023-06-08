@@ -28,6 +28,15 @@ const Fizzbuzz = () => {
         setCount(count + 1);
     };
 
+    const decrementCounter = () => {
+        setCount((count) => {
+          if (count - 1 < 1) {
+            return 1;
+          }
+          return count - 1;
+        });
+    };
+
 return (
     <div data-testid="fizzBuzz">
         <Button
@@ -35,6 +44,7 @@ return (
          text="Increment"
         />
          <Button
+         onClick={decrementCounter}
          text="Decrement"
         />
         <div data-testid="result">
