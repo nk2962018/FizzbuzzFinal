@@ -42,4 +42,11 @@ describe("The Fizzbuzz component works fine when", () => {
         const result = screen.getByTestId("result");
         expect(result).toBeVisible();
     });
+
+    test("Decrement button is clicked and the value remains 1  ", () => {
+        const decrementButton = screen.getByTestId("Decrement");
+         fireEvent.click(decrementButton);
+        const result = screen.getByTestId("result");
+        expect(result).toHaveTextContent("1");
+    });
 });
